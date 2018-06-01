@@ -145,6 +145,8 @@ public class LocalNotification implements ILocalNotification {
         if (color != null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             builder.setColor(color);
         }
+        
+        OreoNotifications.setChannel(mContext, builder);
 
         final Integer lightsColor = mNotificationProps.getLightsColor();
         final Integer lightsOnMs = mNotificationProps.getLightsOnMs();
